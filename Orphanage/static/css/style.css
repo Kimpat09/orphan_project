@@ -1,0 +1,30 @@
+:root {
+  --danger: #711919;
+  --warning: #eda031;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+footer {
+    padding: 1rem;
+    color: white;
+    display: block;
+    text-align: center;
+  }
+
+.carousel-item {
+    background-color: #000000;
+}
+.carousel-item img {
+    height: 512px;
+    object-fit: cover;
+    opacity: 0.75;
+    }
+
+.img-text {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
