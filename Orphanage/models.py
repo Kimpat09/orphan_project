@@ -6,11 +6,15 @@ class Children(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     age       = models.IntegerField(max_length=30)
-    religon   = models.CharField(max_length=30)
+    gender    = models.CharField(max_length=30)
 
-class Adoption(models.Model):
+class Adoption_form(models.Model):
     first_name      = models.CharField(max_length=30)
+    age             = models.IntegerField(max_length=30)
     date_of_birth   = models.IntegerField(max_length=30)
-    address         = models.CharField(max_length=30)
+    place_of_birth  = models.CharField(max_length=30)
+    nationality     = models.CharField(max_length=30)
+    religon         = models.CharField(max_length=30)
+    address         = models.TextField(max_length=30)
     phone_number    = models.IntegerField(max_length=30)
     
