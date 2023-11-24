@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Vina+Sans&display=swap');
+
 :root {
   --danger: #711919;
   --warning: #eda031;
@@ -27,4 +29,9 @@ footer {
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+.navbar{
+  font-size: 1.875rem;
+  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Vina Sans', sans-serif;
 }
