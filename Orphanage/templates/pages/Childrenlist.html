@@ -63,36 +63,14 @@
                 <th>Religion</th>
             </thead>
             <tbody>
-              <tr>
-                <td class="text-center align-middle "></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="text-center align-middle "></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="text-center align-middle "></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="text-center align-middle "></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="text-center align-middle "></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+              {% for children in childrenlist %}
+                <tr>
+                  <td>{{ children.first_name }}</td>
+                  <td>{{ children.sur_name }}</td>
+                  <td>{{ children.age }}</td>
+                  <td>{{ children.religon}}</td>
+                </tr>
+              {% endfor %}
             </tbody>
           </table>
         </div>
