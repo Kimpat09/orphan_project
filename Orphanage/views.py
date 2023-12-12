@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Children
 # Create your views here.
 def index(request):
     return render(request, 'pages/index.html')
@@ -17,5 +17,10 @@ def Dashboard(request):
     return render(request, 'pages/Dashboard.html')
 
 def Childrenlist(request):
-    return render(request, 'pages/Childrenlist.html')
+    childrenlist   = Children.objects.all()
+    context        = {
+        'childrenlist': childrenlist,
+    }
+    return render(request, 'pages/Childrenlist.html', context)
+
 
