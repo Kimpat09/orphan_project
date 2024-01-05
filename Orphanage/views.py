@@ -17,10 +17,13 @@ def Dashboard(request):
     return render(request, 'pages/Dashboard.html')
 
 def Childrenlist(request):
-    childrenlist   = Children.objects.all()
+    children  = StatusForChildren.objects.all()
     context        = {
-        'childrenlist': childrenlist,
+        'children': children
     }
     return render(request, 'pages/Childrenlist.html', context)
+
+def Viewchildren(request):
+    return render(request, 'pages/Viewchildren.html')
 
 
