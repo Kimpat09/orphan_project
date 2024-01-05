@@ -9,4 +9,5 @@ urlpatterns = [
     path ('Login/', views.Login, name="Login"),
     path ('Dashboard/', views.Dashboard, name="Dashboard"),
     path ('Childrenlist/', views.Childrenlist, name="Childrenlist"),
+    path ('Viewchildren/', views.Viewchildren, name="Viewchildren"),
 ]
