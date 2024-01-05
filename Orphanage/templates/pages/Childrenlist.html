@@ -64,13 +64,13 @@
                 <th>Status</th>
             </thead>
             <tbody>
-              {% for children in childrenlist %}
+              {% for child in children %}
                 <tr>
-                  <td>{{ children.first_name }}</td>
-                  <td>{{ children.sur_name }}</td>
-                  <td>{{ children.age }}</td>
-                  <td>{{ children.religon}}</td>
-                  <td>{{ children.status}}</td>
+                  <td>{{ child.children.first_name }}</td>
+                  <td><a href="{% url 'Viewchildren' %}">{{ child.children.sur_name }}</td></a>
+                  <td>{{ child.children.age }}</td>
+                  <td>{{ child.children.religon}}</td>
+                  <td>{{ child.status }}</td>
                 </tr>
               {% endfor %}
             </tbody>
