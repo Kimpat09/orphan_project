@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Children
+from .models import Children, StatusForChildren
 # Create your views here.
 def index(request):
     return render(request, 'pages/index.html')
@@ -25,5 +25,3 @@ def Childrenlist(request):
 
 def Viewchildren(request):
     return render(request, 'pages/Viewchildren.html')
-
-
