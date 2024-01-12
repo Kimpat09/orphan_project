@@ -13,7 +13,7 @@ class Children(models.Model):
 class Admin(models.Model):
     children    = models.ForeignKey(Children, on_delete=models.CASCADE)
     name        = models.CharField(max_length=30) 
-    contact     = models.IntegerField()
+    contact     = models.CharField(max_length=11)
 
 class Adoption(models.Model):
     children        = models.ForeignKey(Children, on_delete=models.CASCADE)
@@ -36,3 +36,8 @@ class StatusForChildren(models.Model):
         ('P', 'Pending')
     ) 
     status  = models.CharField(max_length=30    , choices = STATUS_CHOICE )
+
+    def __str__(self):
+        return f"{self.adoption.first_name} {self.adoption.sur_name} -> {self.children.first_name} {self.children.sur_name} ({self.status})"
+
+    
