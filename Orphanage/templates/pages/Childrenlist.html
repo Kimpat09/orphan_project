@@ -39,7 +39,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="/Childrenlist" class="nav-link text-dark active" aria-current="page">
+              <a href="/Childrenlist" class="nav-link text-dark " aria-current="page">
                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
                    <i class="fa-solid fa-table-list"></i>
                 Childrenlist
@@ -67,7 +67,7 @@
               {% for child in children %}
                 <tr>
                   <td>{{ child.children.first_name }}</td>
-                  <td><a href="{% url 'Viewchildren' %}">{{ child.children.sur_name }}</td></a>
+                  <td><a href="{% url 'Viewchildren' child.children.id %}">{{ child.children.sur_name }}</td></a>
                   <td>{{ child.children.age }}</td>
                   <td>{{ child.children.religon}}</td>
                   <td>{{ child.status }}</td>
