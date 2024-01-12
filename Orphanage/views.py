@@ -23,5 +23,9 @@ def Childrenlist(request):
     }
     return render(request, 'pages/Childrenlist.html', context)
 
-def Viewchildren(request):
-    return render(request, 'pages/Viewchildren.html')
+def Viewchildren(request, pk):
+    child = Children.objects.get(id=pk)
+    context = {
+        'child': child
+    }
+    return render(request, 'pages/Viewchildren.html', context)
