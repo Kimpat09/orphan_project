@@ -26,7 +26,7 @@
               <li><a class="dropdown-item" href="#">Settings</a></li>
               <li><a class="dropdown-item" href="#">Profile</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Sign out</a></li>
+              <li><a class="dropdown-item" href="{% url 'sign_out'%}">Sign out</a></li>
             </ul>
           </div>
           <hr>
@@ -69,7 +69,7 @@
                   <td>{{ child.children.first_name }}</td>
                   <td><a href="{% url 'Viewchildren' child.children.id %}">{{ child.children.sur_name }}</td></a>
                   <td>{{ child.children.age }}</td>
-                  <td>{{ child.children.religon}}</td>
+                  <td>{{ child.children.religion}}</td>
                   <td>{{ child.status }}</td>
                 </tr>
               {% endfor %}
