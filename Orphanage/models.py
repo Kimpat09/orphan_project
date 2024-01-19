@@ -5,7 +5,7 @@ class Children(models.Model):
     first_name = models.CharField(max_length=30)
     sur_name = models.CharField(max_length=30)
     age       = models.IntegerField()
-    religon   = models.CharField(max_length=30)
+    religion   = models.CharField(max_length=30)
     
     def __str__(self):
         return f"{self.first_name} {self.sur_name}"
