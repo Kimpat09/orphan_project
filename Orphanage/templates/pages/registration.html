@@ -26,31 +26,37 @@
                     <input type="text" name="first_name" class="form-control"  id="floatingInput" placeholder="Full Name" required>
                     <label for="floatingInput">First Name</label>
                   </div>
+                  {{ form.first_name.errors }}
 
                   <div class="form-floating mb-3">
                     <input type="text" name="last_name" class="form-control"  id="floatingInput" placeholder="Last Name" required>
                     <label for="floatingInput">Last Name</label>
                   </div>
+                  {{ form.last_name.errors }}
 
                   <div class="form-floating mb-3">
                     <input type="text" name="username" class="form-control"  id="floatingPassword" placeholder="Userame" required>
                     <label for="floatingPassword">Username</label>
                   </div>
+                  {{ form.username.errors }}
 
                   <div class="form-floating mb-3">
                     <input type="text" name="email" class="form-control" id="floatingPassword" placeholder="Email Address" required>
                     <label for="floatingPassword">Email Address</label>
                   </div>
+                  {{ form.email.errors }}
 
                   <div class="form-floating mb-3">
                     <input type="password" name="password1" class="form-control"  id="floatingPassword" placeholder="password" required>
                     <label for="floatingPassword">Password</label>
                   </div>
+                  {{ form.password1.errors }}
 
                   <div class="form-floating">
                     <input type="password" name="password2" class="form-control" id="floatingPassword" placeholder="Confirm Password" required>
                     <label for="floatingPassword">Confirm Password</label>
                   </div>
+                  {{ form.password2.errors }}
 
                   <div class="text-center mt-3">
                     <button class="btn btn-danger">Register</button>
